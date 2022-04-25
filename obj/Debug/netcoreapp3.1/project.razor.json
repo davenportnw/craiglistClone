@@ -14412,8 +14412,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/Posts/Index.cshtml",
+      "TargetPath": "Pages\\Posts\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/Posts/Delete.cshtml",
+      "TargetPath": "Pages\\Posts\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/Posts/Edit.cshtml",
+      "TargetPath": "Pages\\Posts\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14427,8 +14442,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/Posts/Details.cshtml",
+      "TargetPath": "Pages\\Posts\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/Shared/_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/Posts/Create.cshtml",
+      "TargetPath": "Pages\\Posts\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -34,7 +34,8 @@ namespace Final.Models
                 new Post 
                 {
                     Title = "In need: Pet Sitter",
-                    Description = "Will be out of town in a couple of months. Need a petsitter to watch over my two german shepherds. Dolly and Macie are very nice!"
+                    Description = "Will be out of town in a couple of months. Need a petsitter to watch over my two german shepherds. Dolly and Macie are very nice!",
+                    Price = 20.00
                 },
 
                 new Post
