@@ -5,11 +5,21 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>CraigList</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Create Post</a>
 </p>
+
+<form asp-action ="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find post: <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-default"/>
+            <a asp-action="./Index">Back to all posts</a>
+        </p>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -38,7 +48,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.PostID">Edit</a> |
+
                 <a asp-page="./Details" asp-route-id="@item.PostID">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.PostID">Delete</a>
             </td>

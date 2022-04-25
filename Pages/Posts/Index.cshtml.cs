@@ -19,10 +19,27 @@ namespace Final.Pages.Posts
         }
 
         public IList<Post> Post { get;set; }
+        public string CurrentFilter{get; set;}
 
-        public async Task OnGetAsync()
+        // public async Task OnGetAsync()
+        // {
+        //     Post = await _context.Posts.ToListAsync();
+        // }
+        public async Task OnGetAsync(string stringOrder, string searchString)
         {
-            Post = await _context.Posts.ToListAsync();
+            CurrentFilter = searchString;
+
+            IQueryable<Post> posts = from p in _context.Posts   
+                                    select p;
+
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                posts = posts.Where(p => p.Title.Contains(searchString) ||
+                                    p.Description.Contains(searchString));
+            }
+            Post = await posts.AsNoTracking().ToListAsync();
         }
+
+
     }
 }
