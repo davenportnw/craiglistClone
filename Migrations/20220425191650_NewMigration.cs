@@ -2,7 +2,7 @@
 
 namespace Final.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class NewMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,13 +10,13 @@ namespace Final.Migrations
                 name: "Favorites",
                 columns: table => new
                 {
-                    FavoriteID = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
                     PostID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    FavoriteName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Favorites", x => x.FavoriteID);
+                    table.PrimaryKey("PK_Favorites", x => x.PostID);
                 });
 
             migrationBuilder.CreateTable(
@@ -27,6 +27,7 @@ namespace Final.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(maxLength: 60, nullable: false),
                     Description = table.Column<string>(nullable: false),
+                    Price = table.Column<double>(type: "decimal(18,2)", nullable: false),
                     FavoriteID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -36,7 +37,7 @@ namespace Final.Migrations
                         name: "FK_Posts_Favorites_FavoriteID",
                         column: x => x.FavoriteID,
                         principalTable: "Favorites",
-                        principalColumn: "FavoriteID",
+                        principalColumn: "PostID",
                         onDelete: ReferentialAction.Restrict);
                 });
 

@@ -52,6 +52,7 @@ namespace Final.Models
                     Price = 40.00
                 }
                
+               
             );
             context.SaveChanges();
         }

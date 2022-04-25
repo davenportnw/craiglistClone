@@ -18,16 +18,14 @@ namespace Final.Migrations
 
             modelBuilder.Entity("Final.Models.Favorite", b =>
                 {
-                    b.Property<int>("FavoriteID")
+                    b.Property<int>("PostID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("PostID")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("FavoriteName")
+                        .HasColumnType("TEXT");
 
-                    b.HasKey("FavoriteID");
-
-                    b.HasIndex("PostID");
+                    b.HasKey("PostID");
 
                     b.ToTable("Favorites");
                 });
@@ -60,19 +58,10 @@ namespace Final.Migrations
                     b.ToTable("Posts");
                 });
 
-            modelBuilder.Entity("Final.Models.Favorite", b =>
-                {
-                    b.HasOne("Final.Models.Post", "Post")
-                        .WithMany()
-                        .HasForeignKey("PostID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Final.Models.Post", b =>
                 {
-                    b.HasOne("Final.Models.Favorite", null)
-                        .WithMany("Favorites")
+                    b.HasOne("Final.Models.Favorite", "Favorite")
+                        .WithMany("Posts")
                         .HasForeignKey("FavoriteID");
                 });
 #pragma warning restore 612, 618
