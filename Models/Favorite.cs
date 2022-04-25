@@ -6,15 +6,17 @@ namespace Final.Models
 {
     public class Favorite
     {
-        public int FavoriteID {get; set;}
-
+        
+        [Key]
         public int PostID {get; set;} //foreign key back to post table
 
-        public List<Post> FavoritePosts {get; set;} // a user can have MANY posts in their favorite
+        public Post Post {get; set;}
+        public ICollection<Post> Favorites{get; set;} // a user can have MANY posts in their favorite
+        //  public Post Post {get;set;} //Navigation property to a post
 
         public override string ToString()
         {
-            return $"{FavoritePosts}";
+            return $"{Favorites}";
         }
 
     }

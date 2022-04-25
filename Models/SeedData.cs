@@ -43,6 +43,13 @@ namespace Final.Models
                     Title = "Puppies for sale!!",
                     Description = "My laberdoodle just had puppies two months ago. Ready for new forever homes.",
                     Price = 150.00
+                },
+
+                new Post
+                {
+                    Title = "Desk for sale",
+                    Description = "Daughter left for college so no longer need this desk. Has a few minor scratches. Other than that in great shape!",
+                    Price = 40.00
                 }
                
             );
