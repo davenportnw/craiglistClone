@@ -1,0 +1,35 @@
+@page
+@model FavoritesModel
+
+@{
+    ViewData["Title"] = "Favorites";
+}
+
+<h1>CraigList</h1>
+<h2>Your Favorites</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Favorites[0].FavoriteName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Favorites) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FavoriteName)
+            </td>
+            <td>
+
+                <a asp-page="./Details" asp-route-id="@item.PostID">Details</a> |
+                @* <a asp-page="./Delete" asp-route-id="@item.PostID">Delete</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

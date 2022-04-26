@@ -51,8 +51,22 @@ namespace Final.Models
                     Description = "Daughter left for college so no longer need this desk. Has a few minor scratches. Other than that in great shape!",
                     Price = 40.00
                 }
+            
                
-               
+            );
+            
+            context.Favorites.AddRange(
+                new Favorite
+                {
+                    FavoriteName = "For sale: Lawn Mower",
+                    PostID = 1
+                },
+                new Favorite
+                {
+                    FavoriteName = "Desk for sale",
+                    PostID = 5
+                }
+                
             );
             context.SaveChanges();
         }

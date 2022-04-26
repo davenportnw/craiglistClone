@@ -14432,6 +14432,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/Posts/Favorites.cshtml",
+      "TargetPath": "Pages\\Posts\\Favorites.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/nicoledavenport/spring2022/advBusProg/Final/Pages/_ViewStart.cshtml",
       "TargetPath": "Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"

@@ -173,3 +173,4 @@
 /Users/nicoledavenport/spring2022/advBusProg/Final/obj/Debug/netcoreapp3.1/Razor/Pages/Posts/Details.cshtml.g.cs
 /Users/nicoledavenport/spring2022/advBusProg/Final/obj/Debug/netcoreapp3.1/Razor/Pages/Posts/Edit.cshtml.g.cs
 /Users/nicoledavenport/spring2022/advBusProg/Final/obj/Debug/netcoreapp3.1/Razor/Pages/Posts/Index.cshtml.g.cs
+/Users/nicoledavenport/spring2022/advBusProg/Final/obj/Debug/netcoreapp3.1/Razor/Pages/Posts/Favorites.cshtml.g.cs
