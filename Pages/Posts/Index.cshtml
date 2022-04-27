@@ -52,7 +52,8 @@
             <td>
 
                 <a asp-page="./Details" asp-route-id="@item.PostID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.PostID">Delete</a>
+                <a asp-page="./Delete" asp-route-id="@item.PostID">Delete</a> |
+                <a asp-page="./AddFavorite" asp-route-id="@item.PostID">Add to Favorites</a>
             </td>
         </tr>
 }
