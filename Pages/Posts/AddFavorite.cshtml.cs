@@ -5,21 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Final.Models;
 
 namespace Final.Pages.Posts
 {
     public class AddFavoriteModel : PageModel
     {
+       
         private readonly Final.Models.PostContext _context;
+        private readonly ILogger<AddFavoriteModel> _logger;
 
-        public AddFavoriteModel(Final.Models.PostContext context)
+        public AddFavoriteModel(ILogger<AddFavoriteModel> logger, Final.Models.PostContext context)
         {
+            _logger = logger;
             _context = context;
         }
 
         [BindProperty]
         public Post Post { get; set; }
+        
+        public Post PostToFavorite {get; set;} // Post you want to favorite
         public Favorite Favorite {get; set;}
 
        public async Task<IActionResult> OnGetAsync(int? id)
@@ -44,12 +50,17 @@ namespace Final.Pages.Posts
             {
                 return NotFound();
             }
-
-            Favorite = await _context.Favorites.FindAsync(id);
-
-            if (Favorite != null)
+            
+            PostToFavorite = await _context.Posts.FindAsync(id); // Find Post To Favorite
+            
+            if (PostToFavorite != null)
             {
-                _context.Favorites.Add(Favorite);
+                Favorite = _context.Favorites.First(); // Get your favorites
+                if (Favorite.Posts == null) {
+                    Favorite.Posts = new List<Post>();
+                }
+                Favorite.Posts.Add(PostToFavorite); // Add this post to your favorites
+                // _context.Favorites.Add(Favorite);
                 await _context.SaveChangesAsync();
             }
 

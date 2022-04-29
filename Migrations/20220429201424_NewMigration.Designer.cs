@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final.Migrations
 {
     [DbContext(typeof(PostContext))]
-    [Migration("20220426202456_NewMigration")]
+    [Migration("20220429201424_NewMigration")]
     partial class NewMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,14 +20,14 @@ namespace Final.Migrations
 
             modelBuilder.Entity("Final.Models.Favorite", b =>
                 {
-                    b.Property<int>("PostID")
+                    b.Property<int>("FavoriteID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("FavoriteName")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("PostID");
+                    b.HasKey("FavoriteID");
 
                     b.ToTable("Favorites");
                 });

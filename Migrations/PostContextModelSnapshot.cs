@@ -18,14 +18,14 @@ namespace Final.Migrations
 
             modelBuilder.Entity("Final.Models.Favorite", b =>
                 {
-                    b.Property<int>("PostID")
+                    b.Property<int>("FavoriteID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("FavoriteName")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("PostID");
+                    b.HasKey("FavoriteID");
 
                     b.ToTable("Favorites");
                 });

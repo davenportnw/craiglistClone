@@ -15,16 +15,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Favorites[0].FavoriteName)
+                Favorite List Name: @Html.DisplayNameFor(model => model.Favorites[0].FavoriteName)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Favorites) {
+@foreach (var item in Model.Favorites[0].Posts) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FavoriteName)
+                @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
 

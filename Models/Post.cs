@@ -21,7 +21,7 @@ namespace Final.Models
         public double Price {get; set;}
 
         public int? FavoriteID {get; set;} //foriegn key to favorite. Can be empty if not favorited
-        public Favorite? Favorite {get; set;}
+        public Favorite Favorite {get; set;}
 
     }
 }

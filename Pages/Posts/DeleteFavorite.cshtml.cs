@@ -29,7 +29,7 @@ namespace Final.Pages.Posts
                 return NotFound();
             }
 
-            Favorite = await _context.Favorites.FirstOrDefaultAsync(m => m.PostID == id);
+            Favorite = await _context.Favorites.FirstOrDefaultAsync(m => m.FavoriteID == id);
 
             if (Favorite == null)
             {

@@ -7,8 +7,8 @@ namespace Final.Models
     public class Favorite
     {
         
-        [Key]
-        public int PostID {get; set;} //foreign key back to post table
+        public int FavoriteID {get; set;} 
+    
         public string FavoriteName {get; set;}
 
         public List<Post> Posts{get; set;} // a user can have MANY posts in their favorite

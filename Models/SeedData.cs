@@ -58,15 +58,9 @@ namespace Final.Models
             context.Favorites.AddRange(
                 new Favorite
                 {
-                    FavoriteName = "For sale: Lawn Mower",
-                    PostID = 1
-                },
-                new Favorite
-                {
-                    FavoriteName = "Desk for sale",
-                    PostID = 5
+                    FavoriteName = "My list of favorites"
                 }
-                
+               
             );
             context.SaveChanges();
         }

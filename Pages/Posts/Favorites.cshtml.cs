@@ -23,7 +23,7 @@ namespace Final.Pages.Posts
 
         public async Task OnGetAsync()
         {
-            Favorites = await _context.Favorites.ToListAsync();
+            Favorites = await _context.Favorites.Include(f => f.Posts).ToListAsync();
         }
         // public async Task OnGetAsync(string stringOrder, string searchString)
         // {
